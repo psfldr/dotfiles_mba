@@ -1,0 +1,13 @@
+[ghq]
+root = ~/Documents/ghq
+
+[user]
+email = psfldr@gmail.com
+name = psfldr
+
+[diff]
+tool = vimdiff
+
+[difftool]
+prompt = false
+
