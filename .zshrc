@@ -50,9 +50,6 @@ zle -N fzf_cdr
 bindkey '^T' fzf_cdr
 
 # Gitリポジトリへの移動
-function fzf_ghq_preview () {
-  echo 'AAA'
-}
 function fzf_ghq () {
   ghq list \
     | fzf --preview "
