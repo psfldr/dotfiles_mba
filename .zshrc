@@ -1,10 +1,13 @@
-# ディレクトリ選択時、最後の/を残す。好み。
-setopt noautoremoveslash
+# エイリアス
+alias ls='gls --color=auto'
 
-# lsコマンドの補完候補にも色付き表示
-if [ -n "$LS_COLORS" ]; then
-  zstyle ':completion:*:default' list-colors ${LS_COLORS}
+# 色設定
+eval $(gdircolors $HOME/.dircolors/dircolors-solarized/dircolors.ansi-dark)
+if [ -n "$TMUX" ]; then
+  export TERM=screen-256color
 fi
+# lsコマンドの補完候補
+zstyle ':completion:*' list-colors ${LS_COLORS}
 
 # history設定
 HISTFILE=$HOME/.zsh-history   # 履歴を保存するファイル
@@ -13,6 +16,9 @@ SAVEHIST=10000                # 履歴ファイルの項目数
 setopt inc_append_history     # ファイルに追加
 setopt share_history          # タブやウィンドウ間で履歴を共有
 setopt hist_ignore_all_dups   # 重複するコマンドは古い方を削除
+
+# ディレクトリ最後の/を残す。
+setopt noautoremoveslash
 
 # 履歴からコマンドを選択して実行
 function fzf_history_selection() {
@@ -52,9 +58,9 @@ bindkey '^T' fzf_cdr
 # Gitリポジトリへの移動
 function fzf_ghq () {
   ghq list \
-    | fzf --preview "
+    | fzf --ansi --preview "
         echo '[Content]'
-        gls -alp --time-style=long-iso $(ghq root)/{} \
+        gls -alp --color=auto --time-style=long-iso $(ghq root)/{} \
           | tail -n +4 \
           | tail \
           | awk '{print \"[\"\$6\" \"\$7\"] \"\$8}';
