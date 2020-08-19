@@ -1,3 +1,7 @@
+# vimのEscの反映が遅延を防ぐ。不具合あればやめる。
+# https://qiita.com/k2nakamura/items/fa19806a041d0429fc9f
+KEYTIMEOUT=1
+
 # エイリアス
 alias ls='gls --color=auto'
 
