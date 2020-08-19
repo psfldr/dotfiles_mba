@@ -28,7 +28,7 @@ setopt noautoremoveslash
 function fzf_history_selection() {
   history -n 1 \
     | tac \
-    | fzf \
+    | fzf --tiebreak=index \
     | read -d '' BUFFER
   CURSOR=$#BUFFER
   zle reset-prompt
@@ -48,7 +48,7 @@ fi
 function fzf_cdr () {
   cdr -l \
     | sed 's/^[^ ][^ ]*  *//' \
-    | fzf \
+    | fzf --tiebreak=index \
     | read -d '' target_dir
   target_dir=`echo ${target_dir/\~/$HOME}`
   if [ -n "$target_dir" ]; then
