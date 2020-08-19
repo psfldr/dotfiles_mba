@@ -212,6 +212,12 @@
         "options": {
           "full_name": "font-cica"
         }
+      },
+      "karabiner-elements": {
+        "version": "12.10.0",
+        "options": {
+          "full_name": "karabiner-elements"
+        }
       }
     }
   },

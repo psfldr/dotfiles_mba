@@ -12,6 +12,7 @@ brew "tree"                     # ディレクトリの木構造表示
 tap "homebrew/cask"
 cask "docker"                   # コンテナ型仮想化プラットフォーム
 cask "visual-studio-code"       # IDE
+cask "karabiner-elements"       # keyboard customizer
 
 tap "homebrew/cask-fonts"
 cask "font-cica"                # Cicaフォント
