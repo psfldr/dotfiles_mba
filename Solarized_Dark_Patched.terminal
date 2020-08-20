@@ -150,10 +150,10 @@
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
 	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
-	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxApMCAwLjExNzgzNjEwMjggMC4xNTE3MDI3
-	MzE4IDAuODcyMDY0NjY3NgAQAoAC0hQVFhdaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0Nv
-	bG9yohYYWE5TT2JqZWN0CBEaJCkyN0lMUVNXXWRqd36qrK6zvsfP0gAAAAAAAAEBAAAA
-	AAAAABkAAAAAAAAAAAAAAAAAAADb
+	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxAcMCAwLjExNzgzNjEwMjggMC4xNTE3MDI3
+	MzE4ABACgALSFBUWF1okY2xhc3NuYW1lWCRjbGFzc2VzV05TQ29sb3KiFhhYTlNPYmpl
+	Y3QIERokKTI3SUxRU1ddZGp3fp2foaaxusLFAAAAAAAAAQEAAAAAAAAAGQAAAAAAAAAA
+	AAAAAAAAAM4=
 	</data>
 	<key>CursorBlink</key>
 	<true/>
@@ -177,6 +177,8 @@
 	dAgRGiQpMjdJTFFTWF5nbnd+hY6QkpShprG6wcQAAAAAAAABAQAAAAAAAAAcAAAAAAAA
 	AAAAAAAAAAAAzQ==
 	</data>
+	<key>FontHeightSpacing</key>
+	<real>0.875</real>
 	<key>ProfileCurrentVersion</key>
 	<real>2.0699999999999998</real>
 	<key>SelectionColor</key>
@@ -215,7 +217,7 @@
 	<key>name</key>
 	<string>Solarized_Dark_Patched</string>
 	<key>rowCount</key>
-	<integer>39</integer>
+	<integer>42</integer>
 	<key>shellExitAction</key>
 	<integer>1</integer>
 	<key>type</key>
