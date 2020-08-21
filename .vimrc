@@ -1,4 +1,4 @@
-" escキーの遅延対策
+﻿" escキーの遅延対策
 set ttimeoutlen=10
 
 " カーソルの形状
@@ -17,10 +17,11 @@ autocmd VimLeave * silent exec "! echo -ne '\e[5 q'"
 " vim-plug
 """"""""""""""""""""""""""""""
 call plug#begin()
-Plug 'lifepillar/vim-solarized8' " カラースキーム
-Plug 'tomtom/tcomment_vim'              " コメント切り替え
-Plug 'terryma/vim-multiple-cursors'     " 複数カーソル
-Plug 'tpope/vim-fugitive'               " VimからGitを使用する
+Plug 'lifepillar/vim-solarized8'    " カラースキーム
+Plug 'tomtom/tcomment_vim'          " コメント切り替え
+Plug 'terryma/vim-multiple-cursors' " 複数カーソル
+Plug 'tpope/vim-fugitive'           " VimからGitを使用する
+Plug 'ryanoasis/vim-devicons'       " ファイルタイプアイコン
 call plug#end()
 
 """"""""""""""""""""""""""""""
@@ -48,7 +49,7 @@ set directory=~/.vim/tmp  " swp output directory
 if !isdirectory($HOME.'/.vim/tmp')
     silent call mkdir ($HOME.'/.vim/tmp', 'p')
 endif
-fixdel                    " ターミナルオプション 't_kD' {訳注: デリートキー}
+fixdel                    " ターミナルオプション 't_kD' {訳注: デリートキー}E<
                           " の値を設定する。
 set backspace=indent,eol,start
 "" タブと空白
@@ -90,4 +91,51 @@ endif
 " if !exists(":InsertTimeWithUnderbar")
 "   command InsertTimeWithUnderbar put! =strftime(\"%Y_%m%d_%H%M_%S\")
 " endif
+
+""""""""""""""""""""""""""""""
+"" statusline, tabline
+""""""""""""""""""""""""""""""
+
+" statusline設定
+let g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ''
+function GitBranchIcon()
+    return FugitiveHead() != ''  ? '' : ''
+endfunction
+set statusline=
+set statusline+=%f
+set statusline+=%m
+set statusline+=\ %{GitBranchIcon()}
+set statusline+=\ %{FugitiveHead()}
+set statusline+=%=
+set statusline+=\ %{WebDevIconsGetFileTypeSymbol()}
+set statusline+=\ %{&filetype}
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=%{WebDevIconsGetFileFormatSymbol()}
+set statusline+=\ %{&fileformat}
+set statusline+=\ %p%%
+set statusline+=\ \ %l\ %c
+set laststatus=2 " ステータスラインを常に表示
+
+" tabline設定
+function! MyTabLine()
+  let s = ''
+  for i in range(tabpagenr('$'))
+    let tabnr = i + 1 " range() starts at 0
+    let winnr = tabpagewinnr(tabnr)
+    let buflist = tabpagebuflist(tabnr)
+    let bufnr = buflist[winnr - 1]
+    let bufname = fnamemodify(bufname(bufnr), ':t')
+    let s .= '%' . tabnr . 'T'
+    let s .= (tabnr == tabpagenr() ? '%#TabLineSel#' : '%#TabLine#')
+    let s .= ' ' . tabnr
+    let n = tabpagewinnr(tabnr,'$')
+    if n > 1 | let s .= ':' . n | endif
+    let s .= empty(bufname) ? ' [No Name] ' : ' ' . bufname . ' '
+    let bufmodified = getbufvar(bufnr, "&mod")
+    if bufmodified | let s .= '+ ' | endif
+  endfor
+  let s .= '%#TabLineFill#'
+  return s
+endfunction
+set tabline=%!MyTabLine()
 
