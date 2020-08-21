@@ -8,11 +8,12 @@ brew "mackup"                   # 設定ファイルのバックアップ・リ�
 brew "fzf"                      # 対話型フィルタリング
 brew "tmux"                     # terminal multiplexer
 brew "tree"                     # ディレクトリの木構造表示
+brew "vim"                      # text editor
 
 tap "homebrew/cask"
 cask "docker"                   # コンテナ型仮想化プラットフォーム
 cask "visual-studio-code"       # IDE
-cask "karabiner-elements"       # keyboard customizer
+cask "iterm2"                   # terminal emulator
 
 tap "homebrew/cask-fonts"
 cask "font-cica"                # Cicaフォント
