@@ -31,7 +31,7 @@ echo_with_date() {
     echo -e "${COLOR_SETTING}[${DATE_STR}] $2$(tput sgr 0)"
 }
 
-echo_with_date 'INFO' "zsh version: ${ZSH_VERSION}"
+echo_with_date 'INFO' "zsh version: ${ZSH_VERSION}^D"
 
 # install Homebrew
 echo_with_date 'INFO' 'install Homebrew'
@@ -45,6 +45,10 @@ fi
 # install softwares according to Brewfile
 echo_with_date 'INFO' 'install softwares according to Brewfile'
 brew bundle
+
+# install dotfiles with mackup
+echo_with_date 'INFO' 'install dotfiles with mackup'
+mackup restore
 
 # install Tmux Plugin Manager
 echo_with_date 'INFO' 'install Tmux Plugin Manager'
