@@ -11,7 +11,9 @@ if [ -n "$TMUX" ]; then
   export TERM=screen-256color
 fi
 # lsコマンドの補完候補
-zstyle ':completion:*' list-colors ${LS_COLORS}
+autoload -U compinit
+compinit
+zstyle ':completion:*:default' list-colors ${LS_COLORS}
 
 # history設定
 HISTFILE=$HOME/.zsh-history   # 履歴を保存するファイル
