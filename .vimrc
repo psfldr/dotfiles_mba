@@ -97,7 +97,7 @@ endif
 """"""""""""""""""""""""""""""
 
 " statusline設定
-let g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ''
+let g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = '  w/BOM'
 function GitBranchIcon()
     return FugitiveHead() != ''  ? '' : ''
 endfunction
