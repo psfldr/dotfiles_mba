@@ -1,23 +1,8 @@
-﻿" escキーの遅延対策
-set ttimeoutlen=10
-
-" カーソルの形状
-if has('vim_starting')
-    " 挿入モード時に点滅の縦棒タイプのカーソル
-    let &t_SI .= "\e[5 q"
-    " ノーマルモード時に点滅のブロックタイプのカーソル
-    let &t_EI .= "\e[1 q"
-    " 置換モード時に点滅の下線タイプのカーソル
-    let &t_SR .= "\e[3 q"
-endif
-autocmd VimEnter * silent exec "! echo -ne '\e[1 q'"
-autocmd VimLeave * silent exec "! echo -ne '\e[5 q'"
-
-""""""""""""""""""""""""""""""
+﻿""""""""""""""""""""""""""""""
 " vim-plug
 """"""""""""""""""""""""""""""
 call plug#begin()
-Plug 'lifepillar/vim-solarized8'    " カラースキーム
+Plug 'jsit/disco.vim'               " カラースキーム
 Plug 'tomtom/tcomment_vim'          " コメント切り替え
 Plug 'terryma/vim-multiple-cursors' " 複数カーソル
 Plug 'tpope/vim-fugitive'           " VimからGitを使用する
@@ -25,13 +10,26 @@ Plug 'ryanoasis/vim-devicons'       " ファイルタイプアイコン
 call plug#end()
 
 """"""""""""""""""""""""""""""
-"" カラースキーム
+"" color scheme
 """"""""""""""""""""""""""""""
 syntax enable
 set background=dark
-let g:solarized_termtrans=1
-let g:solarized_use16=1
-colorscheme solarized8
+colorscheme disco
+hi CursorLineNr cterm=none ctermfg=none ctermbg=none gui=bold
+hi CursorLine cterm=underline ctermbg=none
+hi Comment term=bold ctermfg=8 guifg=LightGray
+hi TabLine ctermfg=8 ctermbg=0 guifg=DarkGray guibg=Black
+hi TabLineFill term=none cterm=none ctermfg=8 ctermbg=0
+    \ gui=none guifg=DarkGray guibg=Black
+hi ColorColumn term=none ctermbg=0 guibg=Black
+hi VertSplit ctermfg=8 ctermbg=none guifg=LightGray guibg=bg
+hi DiffAdd term=bold ctermfg=10 ctermbg=0 guibg=DarkGreen
+hi DiffChange term=bold ctermfg=14 ctermbg=0 guifg=DarkCyan
+hi DiffText term=none cterm=bold ctermfg=0 ctermbg=14
+    \ gui=bold guibg=Black guibg=Cyan
+hi DiffDelete term=bold ctermfg=9 ctermbg=0
+    \ gui=bold guifg=Black guibg=DarkRed
+hi Visual term=reverse ctermbg=0 guibg=Black
 
 """"""""""""""""""""""""""""""
 "" general
@@ -70,12 +68,25 @@ set cursorline            " カーソル行をハイライトする
 set colorcolumn=80        " 80文字目をハイライトする
 "" 特定のコマンドを実行する時に自動でquickfixウィンドウを開く
 au QuickfixCmdPost make,grep,grepadd,vimgrep,helpg copen
+"" escキーの遅延対策
+set ttimeoutlen=10
+"" カーソルの形状
+if has('vim_starting')
+    " 挿入モード時に点滅の縦棒タイプのカーソル
+    let &t_SI .= "\e[5 q"
+    " ノーマルモード時に点滅のブロックタイプのカーソル
+    let &t_EI .= "\e[1 q"
+    " 置換モード時に点滅の下線タイプのカーソル
+    let &t_SR .= "\e[3 q"
+endif
+autocmd VimEnter * silent exec "! echo -ne '\e[1 q'"
+autocmd VimLeave * silent exec "! echo -ne '\e[5 q'"
 
 """"""""""""""""""""""""""""""
 "" key mapping
 """"""""""""""""""""""""""""""
-inoremap jj <esc>:noh<CR>:set nopaste<CR>:checktime<CR>:echo "ESC"<CR>
-nnoremap <C-[> <esc>:noh<CR>:set nopaste<CR>:checktime<CR>:echo "ESC"<CR>
+inoremap jj <esc>
+nnoremap <silent> j j:noh<CR>
 
 """"""""""""""""""""""""""""""
 "" user defined command
@@ -95,7 +106,6 @@ endif
 """"""""""""""""""""""""""""""
 "" statusline, tabline
 """"""""""""""""""""""""""""""
-
 " statusline設定
 let g:WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = '  w/BOM'
 function GitBranchIcon()
