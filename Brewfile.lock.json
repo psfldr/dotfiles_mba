@@ -207,7 +207,8 @@
         "id": "443987910",
         "version": "6.8.9"
       },
-      "line": null
+      "line": null,
+      "simplenote": null
     },
     "cask": {
       "docker": {

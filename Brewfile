@@ -1,6 +1,7 @@
 brew "mas"                      # Mac App Storeからのインストール
 mas "1Password", id: 443987910  # パスワード管理
 mas "line", id: 539883307       # チャット・通話
+mas "simplenote", id: 692867256 # note taking
 
 brew "coreutils"                # GNU Uore Utilities
 brew "ghq"                      # Gitリポジトリ管理
@@ -18,7 +19,7 @@ cask "iterm2"                   # terminal emulator
 tap "homebrew/cask-fonts"
 cask "font-cica"                # Cicaフォント
 
-# indivisual fomulae
-tap "psfldr/tap"
+
+tap "psfldr/tap"                # indivisual fomulae
 cask "trendmicro-virusbuster"   # セキュリティーソフト(requres password)
 
