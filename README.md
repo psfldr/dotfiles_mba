@@ -1,5 +1,7 @@
 # dotfiles
 
+設定ファイル
+
 ## install
 
 ```
@@ -14,7 +16,7 @@ zsh install.zsh
     - 強調表示色: グラファイト
     - サイドバーのアイコンサイズ: 小
 - Dock
-    - サイズ
+    - サイズ調整
 - インターネットアカウント
     - 各アカウントを有効化
 - アクセシビリティ
@@ -60,7 +62,21 @@ drwxr-xr-x 5 psfldr admin 160  8 16 15:25 site-functions
 ~ %
 ```
 
+### vscode extention
+
+```
+psfldr@psfldr-mba dotfiles % date; code --list-extensions
+2020年 8月30日 日曜日 19時43分00秒 JST
+AndrsDC.base16-themes
+GitHub.github-vscode-theme
+tusaeff.vscode-iterm2-theme-sync
+vscodevim.vim
+```
+
 ## TODO
 
-
+- logo: [Erika Ormig Font · 1001 Fonts](
+https://www.1001fonts.com/erika-ormig-font.html?text=%40psfldr
+)
+- neofetch
 
