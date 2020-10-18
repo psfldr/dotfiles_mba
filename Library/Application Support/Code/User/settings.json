@@ -1,3 +1,4 @@
 {
-    "workbench.colorTheme": "Base16 Dark Ashes"
+    "workbench.colorTheme": "Base16 Dark Ashes",
+    "editor.fontFamily": "Cica, Menlo, Monaco, 'Courier New', monospace"
 }
