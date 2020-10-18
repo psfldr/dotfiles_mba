@@ -1,7 +1,8 @@
 brew "mas"                      # Mac App Storeからのインストール
 mas "1Password", id: 443987910  # パスワード管理
 mas "line", id: 539883307       # チャット・通話
-mas "simplenote", id: 692867256 # note taking
+mas "simplenote", id: 692867256 # text storage
+mas "Drafts", id: 1435957248    # note taking
 
 brew "coreutils"                # GNU Uore Utilities
 brew "ghq"                      # Gitリポジトリ管理

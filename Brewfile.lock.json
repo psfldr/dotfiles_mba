@@ -208,7 +208,11 @@
         "version": "6.8.9"
       },
       "line": null,
-      "simplenote": null
+      "simplenote": null,
+      "Drafts": {
+        "id": "1435957248",
+        "version": "22.0"
+      }
     },
     "cask": {
       "docker": {
