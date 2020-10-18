@@ -1,4 +1,18 @@
 {
     "workbench.colorTheme": "Base16 Dark Ashes",
-    "editor.fontFamily": "Cica, Menlo, Monaco, 'Courier New', monospace"
+    "editor.fontFamily": "Cica, Menlo, Monaco, 'Courier New', monospace",
+    "window.nativeFullScreen": false,
+    "terminal.integrated.rendererType": "dom",
+    "editor.rulers": [80],
+    "editor.minimap.renderCharacters": false,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "terminal.integrated.cursorStyle": "line",
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
 }

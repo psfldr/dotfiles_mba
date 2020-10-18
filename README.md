@@ -31,7 +31,9 @@ zsh install.zsh
 
 ## note
 
-- `defaults` コマンドによる設定は難解なので不採用
+### configure script macOS setting
+
+`defaults` コマンドによる設定は難解なので断念
 
 ### zsh compaudit: insecure directory
 
@@ -75,8 +77,6 @@ vscodevim.vim
 
 ## TODO
 
-- logo: [Erika Ormig Font · 1001 Fonts](
-https://www.1001fonts.com/erika-ormig-font.html?text=%40psfldr
-)
 - neofetch
+- vscode extention installation script
 
