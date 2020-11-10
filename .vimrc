@@ -2,7 +2,7 @@
 " vim-plug
 """"""""""""""""""""""""""""""
 call plug#begin()
-Plug 'jsit/disco.vim'               " カラースキーム
+Plug 'arcticicestudio/nord-vim'     " カラースキーム
 Plug 'tomtom/tcomment_vim'          " コメント切り替え
 Plug 'terryma/vim-multiple-cursors' " 複数カーソル
 Plug 'tpope/vim-fugitive'           " VimからGitを使用する
@@ -14,22 +14,7 @@ call plug#end()
 """"""""""""""""""""""""""""""
 syntax enable
 set background=dark
-colorscheme disco
-hi CursorLineNr cterm=none ctermfg=none ctermbg=none gui=bold
-hi CursorLine cterm=underline ctermbg=none
-hi Comment term=bold ctermfg=8 guifg=LightGray
-hi TabLine ctermfg=8 ctermbg=0 guifg=DarkGray guibg=Black
-hi TabLineFill term=none cterm=none ctermfg=8 ctermbg=0
-    \ gui=none guifg=DarkGray guibg=Black
-hi ColorColumn term=none ctermbg=0 guibg=Black
-hi VertSplit ctermfg=8 ctermbg=none guifg=LightGray guibg=bg
-hi DiffAdd term=bold ctermfg=10 ctermbg=0 guibg=DarkGreen
-hi DiffChange term=bold ctermfg=14 ctermbg=0 guifg=DarkCyan
-hi DiffText term=none cterm=bold ctermfg=0 ctermbg=14
-    \ gui=bold guibg=Black guibg=Cyan
-hi DiffDelete term=bold ctermfg=9 ctermbg=0
-    \ gui=bold guifg=Black guibg=DarkRed
-hi Visual term=reverse ctermbg=0 guibg=Black
+colorscheme nord
 
 """"""""""""""""""""""""""""""
 "" general
