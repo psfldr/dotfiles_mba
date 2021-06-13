@@ -16,7 +16,8 @@ compinit
 zstyle ':completion:*:default' list-colors ${LS_COLORS}
 
 # history設定
-HISTFILE=$HOME/.zsh-history   # 履歴を保存するファイル
+
+HISTFILE="$XDG_DATA_HOME"/zsh/history  # 履歴を保存するファイル
 HISTSIZE=1000                 # メモリ上に保存する項目数
 SAVEHIST=10000                # 履歴ファイルの項目数
 setopt inc_append_history     # ファイルに追加
@@ -83,4 +84,7 @@ function fzf_ghq () {
 }
 zle -N fzf_ghq
 bindkey '^G' fzf_ghq
+
+export JAVA_HOME=`/usr/libexec/java_home -v 11.0.2`
+launchctl setenv JAVA_HOME $JAVA_HOME
 

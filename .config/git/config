@@ -11,3 +11,5 @@ tool = vimdiff
 [difftool]
 prompt = false
 
+[diff "plist"]
+	textconv = plutil -conver xml1 -o -

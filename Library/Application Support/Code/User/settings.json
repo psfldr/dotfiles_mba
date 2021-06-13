@@ -1,9 +1,9 @@
 {
-    "workbench.colorTheme": "Base16 Dark Ashes",
+    "workbench.colorTheme": "Nord",
     "editor.fontFamily": "Cica, Menlo, Monaco, 'Courier New', monospace",
     "window.nativeFullScreen": false,
-    "terminal.integrated.rendererType": "dom",
-    "editor.rulers": [80],
+    "terminal.integrated.rendererType": "canvas",
+    "editor.rulers": [79],
     "editor.minimap.renderCharacters": false,
     "vim.insertModeKeyBindings": [
         {
@@ -11,8 +11,28 @@
             "after": ["<Esc>"]
         }
     ],
+    "vim.leader": "<space>",
     "terminal.integrated.cursorStyle": "line",
     "editor.minimap.enabled": false,
-    "editor.fontSize": 14,
-    "terminal.integrated.fontSize": 14,
+    "editor.fontSize": 17,
+    "terminal.integrated.fontSize": 16,
+    "editor.wordWrapColumn": 79,
+    "window.titleBarStyle": "native",
+    "resmon.updatefrequencyms": 10000,
+    "dateTime.padDays": true,
+    "dateTime.showDayOfMonth": true,
+    "dateTime.showMonth": true,
+    "dateTime.showDayOfWeek": true,
+    "resmon.show.cpufreq": false,
+    "docker.host": "ssh://oracle",
+    "window.zoomLevel": -1,
+    "debug.console.fontSize": 17,
+    "editor.lineHeight": 20,
+    "workbench.panel.opensMaximized": "always",
+    "vim.easymotion": true,
+    "workbench.editorAssociations": [
+    
+    ],
+    "git-graph.showStatusBarItem": false,
+    "markdown.preview.fontSize": 16
 }

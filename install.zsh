@@ -43,6 +43,8 @@ else
 fi
 
 # install softwares according to Brewfile
+echo_with_date 'INFO' 'update Homebrew'
+brew update
 echo_with_date 'INFO' 'install softwares according to Brewfile'
 brew bundle
 
