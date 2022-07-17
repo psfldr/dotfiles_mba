@@ -17,7 +17,6 @@
     "editor.fontSize": 17,
     "terminal.integrated.fontSize": 16,
     "editor.wordWrapColumn": 79,
-    "window.titleBarStyle": "native",
     "resmon.updatefrequencyms": 10000,
     "dateTime.padDays": true,
     "dateTime.showDayOfMonth": true,
@@ -30,9 +29,6 @@
     "editor.lineHeight": 20,
     "workbench.panel.opensMaximized": "always",
     "vim.easymotion": true,
-    "workbench.editorAssociations": [
-    
-    ],
     "git-graph.showStatusBarItem": false,
     "markdown.preview.fontSize": 16
 }

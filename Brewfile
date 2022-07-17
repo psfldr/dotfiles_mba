@@ -22,7 +22,7 @@ cask "disk-inventory-x"         # ストレージ分析
 cask "google-chrome"            # Webブラウザ
 cask "virtualbox"               # 仮想化
 cask "vagrant"                  # 仮想マシン設定
-cask "microsoft-teams"          # 
+cask "slack"          # 
 
 tap "homebrew/cask-fonts"
 cask "font-cica"                # Cicaフォント
